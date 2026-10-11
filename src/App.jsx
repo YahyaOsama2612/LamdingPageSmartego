@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ChatDemo from "./ChatDemo.jsx";
-import TryIt from "./TryIt.jsx";
+import TryIt from "./Tryit.jsx";
 import Packages from "./Packages.jsx";
 import Contact from "./Contact.jsx";
 import Reveal from "./Reveal.jsx";

@@ -20,7 +20,7 @@ const STEPS = [
 const HEADLINE = "Answer every customer message, even while you sleep.".split(" ");
 const BUBBLES = [[8, 90, 14, 0], [22, 60, 18, 3], [38, 110, 16, 6], [55, 70, 20, 1.5], [70, 100, 15, 4.5], [86, 64, 19, 8]];
 
-const USER_PORTAL_URL = import.meta.env.VITE_USER_URL || "https://smartego.org/user";
+const USER_PORTAL_URL = import.meta.env.VITE_USER_URL || "https://smartego.org/user/login/login";
 
 export default function App() {
   const [prefill, setPrefill] = useState("");

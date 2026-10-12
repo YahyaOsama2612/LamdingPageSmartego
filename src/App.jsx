@@ -20,6 +20,8 @@ const STEPS = [
 const HEADLINE = "Answer every customer message, even while you sleep.".split(" ");
 const BUBBLES = [[8, 90, 14, 0], [22, 60, 18, 3], [38, 110, 16, 6], [55, 70, 20, 1.5], [70, 100, 15, 4.5], [86, 64, 19, 8]];
 
+const USER_PORTAL_URL = import.meta.env.VITE_USER_URL || "https://smartego.org/user";
+
 export default function App() {
   const [prefill, setPrefill] = useState("");
   const [lang, setLang] = useState("en"); // sent to GET /user/packages as ?lang=
@@ -62,7 +64,14 @@ export default function App() {
               <button key={l} className={lang === l ? "on" : ""} aria-pressed={lang === l} onClick={() => setLang(l)}>{l === "en" ? "EN" : "عربي"}</button>
             ))}
           </div>
-          <a className="btn sm" href="#plans">Get started</a>
+          <div className="bar-actions">
+            <a className="btn sm ghost" href={USER_PORTAL_URL}>
+              {lang === "ar" ? "تسجيل الدخول" : "Sign in"}
+            </a>
+            <a className="btn sm" href="#plans">
+              {lang === "ar" ? "ابدأ الآن" : "Get started"}
+            </a>
+          </div>
         </div>
       </header>
 

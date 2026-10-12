@@ -180,6 +180,12 @@ nav a:hover {
   font-size: 15px;
 }
 
+.bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* hero */
 .hero-bg {
   background:
@@ -811,12 +817,51 @@ footer .wrap {
     display: none;
   }
 
-  .bar .btn {
+  .bar .btn,
+  .bar-actions {
     margin-left: auto;
   }
 
   section {
     padding: 60px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .bar {
+    gap: 12px;
+  }
+
+  .bar-actions {
+    gap: 8px;
+  }
+
+  .bar-actions .btn.sm {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 440px) {
+  .bar {
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .logo i {
+    width: 28px;
+    height: 28px;
+  }
+
+  .bar-actions .btn.sm {
+    padding: 0 8px;
+    font-size: 12px;
+    border-radius: 9px;
   }
 }
 
